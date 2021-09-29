@@ -1,0 +1,42 @@
+/*------------------------------------*/
+//  #BODY
+/*------------------------------------*/
+
+body {
+  font-family: sans-serif;
+  font-size: 16px;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+/*------------------------------------*/
+//  #HEADER
+/*------------------------------------*/
+
+header {
+  nav {
+    text-align: center;
+  }
+}
+
+main {
+  h2 {
+    font-size: clamp(1rem, 3.5vw, 3.5rem);
+    text-stroke: 1px var(--prime);
+    -webkit-text-stroke: 1px var(--prime);
+
+    @supports not (text-stroke: 1px var(--prime)) {
+      color: transparent;
+    }
+  }
+}
+
+/*------------------------------------*/
+//  #FOOTER
+/*------------------------------------*/
+
+footer {
+  text-align: center;
+}

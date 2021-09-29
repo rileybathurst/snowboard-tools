@@ -1,0 +1,48 @@
+.prime__background {
+  background-color: var(--prime);
+  color: whitesmoke;
+
+  a {
+    color: white;
+  }
+}
+
+/*------------------------------------*/
+//  #HEADER
+/*------------------------------------*/
+
+header {
+  h1 {
+    color: var(--prime);
+  }
+
+  h2 {
+    color: var(--prime);
+  }
+
+  nav {
+    @extend .prime__background;
+  }
+}
+
+/*------------------------------------*/
+//  #MAIN
+/*------------------------------------*/
+
+/*------------------------------------*/
+//  #FOOTER
+/*------------------------------------*/
+
+footer {
+  @extend .prime__background;
+}
+
+/*------------------------------------*/
+//  #EXTRAS
+/*------------------------------------*/
+
+.adsense {
+  display: grid;
+  place-items: center;
+  background: lightgrey;
+}

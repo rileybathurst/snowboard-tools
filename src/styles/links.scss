@@ -1,0 +1,39 @@
+a {
+  color: var(--prime);
+}
+
+a:hover {
+  background: hsl(var(--prime__hs), calc(var(--prime__s) + 10%));
+}
+
+.prime__background a {
+  color: whitesmoke;
+}
+
+.prime__background a:hover {
+  color: white;
+}
+
+.app-button {
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.app-button:hover {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+:is(header, footer) a {
+  @extend .app-button;
+}
+
+button {
+  background: var(--prime);
+  color: whitesmoke;
+  border: none;
+  height: min-content;
+  padding: 0.5rem 1rem;
+  font-size: 1.5rem;
+  outline: 2px solid var(--prime);
+  outline-offset: 0.25rem;
+}

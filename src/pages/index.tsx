@@ -88,6 +88,7 @@ function Size() {
 
 function State() {
   const [count, setCount] = useState(1);
+  console.log(count);
 
   // setCount(count + 1);
   function handleClick(e) {
@@ -112,7 +113,7 @@ function State() {
   );
 }
 
-function Date() {
+/* function Date() {
   const [dount, setDount] = useState(1);
   console.log(dount);
 
@@ -130,7 +131,7 @@ function Date() {
       counter {dount}
     </>
   );
-}
+} */
 
 // markup
 const IndexPage = () => {
@@ -142,7 +143,7 @@ const IndexPage = () => {
         <Size />
 
         <State />
-        <Date />
+        {/* <Date /> */}
       </main>
       <FooterSection />
     </>

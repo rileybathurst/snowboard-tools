@@ -30,10 +30,28 @@ function Size() {
     setMountain(g.target.value);
 
     // not getting this yet
-    if (mountain === 1) {
-      setResort('learner')
+    if (mountain == 0) {
+      setResort('learner');
+    } else if (mountain == 1) {
+      setResort('beginner');
+    } else if (mountain == 2) {
+      setResort('intermediate');
+    } else if (mountain == 3) {
+      setResort('groomer cruiser');
+    } else if (mountain == 4) {
+      setResort('parkrat');
+    } else if (mountain == 5) {
+      setResort('alrounder');
+    } else if (mountain == 6) {
+      setResort('hitting the blacks');
+    } else if (mountain == 7) {
+      setResort('jump stick');
+    } else if (mountain == 8) {
+      setResort('all mountain');
+    } else if (mountain == 9) {
+      setResort('powder hound');
     } else {
-      setResort('intermediate')
+      setResort('big mountain');
     }
 
     return null;

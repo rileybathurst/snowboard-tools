@@ -12,6 +12,8 @@ function Size() {
   const [weight, setWeight] = useState(70); // 175 height * 0.4
   const [weightGuess, setWeightGuess] = useState(70); // were guessing right to start
   const [weightDiff, setWeightDiff] = useState(0); // were guessing right to start
+  const [mountain, setMountain] = useState(0); // were guessing right to start
+  const [resort, setResort] = useState('intermediate'); // were guessing right to start
 
   // should I be returning the height
   function heightCm(e) {
@@ -19,19 +21,30 @@ function Size() {
     return null;
   }
 
-  function weightKg(e) {
-    setWeight(e.target.value);
+  function weightKg(f) {
+    setWeight(f.target.value);
+    return null;
+  }
+
+  function mountainSize(g) {
+    setMountain(g.target.value);
+
+    // not getting this yet
+    if (mountain === 1) {
+      setResort('learner')
+    } else {
+      setResort('intermediate')
+    }
+
     return null;
   }
 
   // this always run last
   useEffect(() => {
     setWeightGuess(height * 0.4);
-    console.log('guess ' + weightGuess);
     setWeightDiff((1 - (weight - weightGuess)) * 0.3);
-    console.log('diff is ' + weightDiff);
-    setSize(Math.round((height - weightDiff) * 0.885)); // + breaks this it might have to be flipped
-  }, [height, weight]);
+    setSize((Math.round((height - weightDiff) * 0.885)) - (5 - mountain)); // + breaks this it might have to be flipped
+  }, [height, weight, mountain]);
 
   return (
     <>
@@ -47,9 +60,10 @@ function Size() {
           onChange={heightCm}
         />
         {height}
-        {/* <p>&#60;&#60;&#60; slide &#62;&#62;&#62;</p> */}
+        <p>&#60;&#60;&#60; slide &#62;&#62;&#62;</p>
 
         <hr />
+
         <label>
           Weight
         </label>
@@ -60,6 +74,21 @@ function Size() {
           onChange={weightKg}
         />
         {weight}
+        <p>&#60;&#60;&#60; slide &#62;&#62;&#62;</p>
+
+        <hr />
+
+        <label>
+          Mountain
+        </label>
+        <input
+          type="range"
+          min="0"
+          max="10"
+          onChange={mountainSize}
+        />
+        {resort}
+        <p>&#60;&#60;&#60; slide &#62;&#62;&#62;</p>
 
         <h3>Size</h3>
         {size}

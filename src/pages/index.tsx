@@ -31,7 +31,7 @@ function Size() {
     setWeightDiff((1 - (weight - weightGuess)) * 0.3);
     console.log('diff is ' + weightDiff);
     setSize(Math.round((height - weightDiff) * 0.885)); // + breaks this it might have to be flipped
-  }, [height]);
+  }, [height, weight]);
 
   return (
     <>

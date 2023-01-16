@@ -1,7 +1,9 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
-    title: "snowboard-tools",
+    siteUrl: "https://snowboard.tools",
+    title: "Snowboard Tools",
+    author: "@rileybathurst",
+    description: "A collection of tools for snowboarding."
   },
   plugins: [
     "gatsby-plugin-sass",

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import FooterSection from "../components/footer";
 import HeaderSection from "../components/header";
+import Seo from '../components/seo';
 
 import "../styles/app.scss";
 
@@ -30,6 +31,7 @@ function Size() {
     setMountain(g.target.value);
 
     // not getting this yet
+    // TODO: I think theres cleaner ways to do a library
     if (mountain == 0) {
       setResort('learner');
     } else if (mountain == 1) {
@@ -66,6 +68,7 @@ function Size() {
 
   return (
     <>
+      <Seo title="Snowboard Tools" />
       <h2>Snowboard Size Guide</h2>
       <form>
         <label>
